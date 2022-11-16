@@ -28,6 +28,7 @@ def is_valid_input_csv(parser, input_csv_files, column_limit):
             sys.exit(1)
 
 
+# to check that only .csv files are read
 def is_valid_output_csv(parser, output_file):
     filename, file_extension = os.path.splitext(output_file)
     if file_extension != '.csv':
@@ -65,9 +66,11 @@ def main():
     is_valid_output_csv(parser, args.output_file)
     # get list of csv file as input_file argument
     output_csv_df = combined_csv(args.input_file)
+    # to remove non-word characters for some data
+    output_csv_df['category'] = output_csv_df['category'].str.replace('\W', '', regex=True)
     # write output csv to csv files
     with open(args.output_file, 'w') as f:
-        output_csv_df.to_csv(f, encoding='utf-8', index=False, line_terminator='\n')
+        output_csv_df.to_csv(f, encoding='utf-8', escapechar='\\', doublequote=False, index=False, line_terminator='\n')
 
 
 if __name__ == "__main__":
