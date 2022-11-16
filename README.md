@@ -14,7 +14,7 @@ pip install -r requirements.txt
 ```
 
 ## Output
-- Output file is saved in csv_combined.csv
+- Output file is saved as csv_combined.csv
 ## Run Unit Tests
 
 ```bash
