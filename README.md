@@ -1,7 +1,9 @@
 # CSV Combiner
 This command line program will take several CSV files as arguments and output a new csv file that has all the rows from each of the input csv files along with additional column that has the filename from which the row came.
 ## Set up enviroment
-Python3 required
+Python3 required.
+
+install the required libraries by running following command:
 ```bash
 pip install -r requirements.txt
 ```
