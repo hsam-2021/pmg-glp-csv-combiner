@@ -32,6 +32,7 @@ pip install -r requirements.txt
 ### Known issue
 When running in Ubuntu20.04 LTS (using Python 3.8.10):
 
-![img.png](img.png)
+**csvCombine.py:73: FutureWarning: the 'line_terminator'' keyword is deprecated, use 'lineterminator' instead.
+output_csv_df.to_csv(f, encoding='utf-8', escapechar='\\', doublequote=False, index=False, line_terminator='\n')**
 
-So if you are testing on Linux machine, just replace “line_terminator” with “lineterminator” on line 70 (csvCombine.py)
+So if you are testing on Linux machine, just replace “line_terminator” with **“lineterminator”** on line 73 (csvCombine.py)
