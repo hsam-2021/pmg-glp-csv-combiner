@@ -27,6 +27,8 @@ pip install -r requirements.txt
 * All the lines from the csv file are being read as expected.
 * To test count of unique values in filename column which should be equal to the number of files in the  input folder
 
+Run the test cases by running the following command:
+
 ```bash
 
  python -m unittest test_csvCombine.py
