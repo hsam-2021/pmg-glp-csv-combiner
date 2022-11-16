@@ -22,6 +22,10 @@ pip install -r requirements.txt
 ### Output
 - Output file is saved as **csv_combined.csv**
 ### Run Unit Tests
+#### Test cases created for following cases:
+* The csv data is being written in the file correctly.
+* All the lines from the csv file are being read as expected.
+* To test count of unique values in filename column which should be equal to the number of files in the  input folder
 
 ```bash
 
